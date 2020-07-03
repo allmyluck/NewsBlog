@@ -1,7 +1,10 @@
 1)RSS файлы(XML) -> обкачка(защита от сохранения дублей уже обкаченных новостей).
 Скачка файлов(RSS потоков с переименованием):
+
    1)wget --limit-rate=100k -P ~/practice/files/ https://lenta.ru/rss/news ; mv ~/practice/files/news ~/practice/files/news_lenta
+
    2)wget --limit-rate=100k -P ~/practice/files/ https://meduza.io/rss/news ; mv ~/practice/files/news ~/practice/files/news_meduza
+
 вызов скрипта:sh /home/nikita/practice/scripts/downoload.sh
 
 
