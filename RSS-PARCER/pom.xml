@@ -16,6 +16,11 @@
             <artifactId>rome</artifactId>
             <version>1.0RC2</version>
         </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.20</version>
+        </dependency>
     </dependencies>
 
 </project>
