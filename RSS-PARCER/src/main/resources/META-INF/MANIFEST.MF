@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Main-Class: main.Main
+Class-Path: rome-1.0RC2.jar mysql-connector-java-8.0.20.jar protobuf-jav
+ a-3.6.1.jar jdom-1.0.jar
+
