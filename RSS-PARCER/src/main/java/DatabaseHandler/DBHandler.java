@@ -36,8 +36,12 @@ public class DBHandler {
 
     private void InsertInDatabase(SyndEntry current, String name) throws SQLException {
         Statement stmt = connection.createStatement();
+        current.setTitle(current.getTitle().replace("'","\\'"));
+        current.setTitle(current.getTitle().replace("\"","\\\""));
+        String tempDescriptionFirst = current.getDescription().getValue().replace("'","\\'");
+        tempDescriptionFirst = tempDescriptionFirst.replace("\"","\\\"");
         String query = String.format("INSERT INTO news VALUES('%s','%s','%s','%s','%s',%d);",
-                name, current.getTitle(), current.getDescription().getValue(),
+                name, current.getTitle(), tempDescriptionFirst,
                 current.getPublishedDate(), current.getLink(),
                 current.getPublishedDate().getTime());
         //System.out.println(query);
