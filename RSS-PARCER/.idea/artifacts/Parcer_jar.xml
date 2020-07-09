@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact name="Parcer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Parcer_jar</output-path>
+    <root id="root">
+      <element id="archive" name="RSS-PARCER.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="RSS-PARCER" />
+      </element>
+      <element id="library" level="project" name="Maven: jdom:jdom:1.0" />
+      <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.20" />
+      <element id="library" level="project" name="Maven: rome:rome:1.0RC2" />
+      <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.6.1" />
+    </root>
+  </artifact>
+</component>
