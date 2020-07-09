@@ -58,7 +58,11 @@ public class DBHandler {
             for(Object objectEntry : current.getEntries()) {
                 SyndEntry currentEntry = (SyndEntry)objectEntry;
                 if(times.size() > 0 && currentEntry.getPublishedDate().getTime() > times.get(0)) {
-                    InsertInDatabase(currentEntry, current.GetName());
+                    try {
+                        InsertInDatabase(currentEntry, current.GetName());
+                    } catch (Exception e) {
+                        System.out.println("Something do wrong:" + e);
+                    }
                     //System.out.println("1");
                 } else if(times.size() > 0 && currentEntry.getPublishedDate().getTime() == times.get(0)) {
                     boolean check = true;
@@ -69,11 +73,19 @@ public class DBHandler {
                         }
                     }
                     if(check) {
-                        InsertInDatabase(currentEntry, current.GetName());
+                        try {
+                            InsertInDatabase(currentEntry, current.GetName());
+                        } catch (Exception e) {
+                            System.out.println("Something do wrong:" + e);
+                        }
                         //System.out.println("2");
                     }
                 } else if(times.size() == 0) {
-                    InsertInDatabase(currentEntry, current.GetName());
+                    try {
+                        InsertInDatabase(currentEntry, current.GetName());
+                    } catch (Exception e) {
+                        System.out.println("Something do wrong:" + e);
+                    }
                     //System.out.println("3");
                 }
             }
