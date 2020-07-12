@@ -6,6 +6,7 @@
 2)wget --limit-rate=100k -P ~/practice/files/ https://meduza.io/rss/news ; mv ~/practice/files/news ~/practice/files/news_meduza
 
 вызов скрипта:sh /home/nikita/practice/scripts/downoload.sh
+
 /*
 https://lenta.ru/rss/news
 
