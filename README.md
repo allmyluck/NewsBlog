@@ -8,6 +8,7 @@
 вызов скрипта:sh /home/nikita/practice/scripts/downoload.sh
 
 
+
 /*
 https://lenta.ru/rss/news
 
