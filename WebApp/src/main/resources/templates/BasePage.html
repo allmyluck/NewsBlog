@@ -1,30 +1,20 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
-    <meta charset="UTF-8" />
-    <title>Person List</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+    <meta http-equiv="Content-type" content="text/html" charset="UTF-8" />
+    <title>News Blog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
-<h1>News</h1>
-<br/><br/>
-<div>
-    <table border="1">
-        <tr>
-            <th>title</th>
-            <th>description</th>
-            <th>pubDate</th>
-            <th>link</th>
-            <th>source</th>
-        </tr>
-        <tr th:each ="el : ${currentNews}">
-            <td th:utext="${el.title}">...</td>
-            <td th:utext="${el.description}">...</td>
-            <td th:utext="${el.pubDate}">...</td>
-            <td th:utext="${el.link}">...</td>
-            <td th:utext="${el.author}">...</td>
-        </tr>
-    </table>
+<div class = "container mt-5">
+    <h1>News Blog</h1>
+    <div th:each ="el : ${currentNews}" class="alert alert-info mt-2">
+            <h3 th:text="${el.title}"> </h3>
+            <p th:text="${el.description}"> </p>
+            <p th:text="${el.pubDate}"> </p>
+            <a th:href="${el.link}">Читать полностью</a>
+            <p align="right"> Source: <span th:text="${el.author}"></span> </p>
+    </div>
 </div>
 </body>
 </html>

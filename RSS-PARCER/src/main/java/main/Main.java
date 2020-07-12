@@ -11,6 +11,7 @@ public class Main {
             ArrayList<authors> myAuthors = new ArrayList<>();
             myAuthors.add(new authors("meduza.io/rss/news", new URL("https://meduza.io/rss/news")));
             myAuthors.add(new authors("lenta.ru/rss/news", new URL("https://lenta.ru/rss/news")));
+            myAuthors.add(new authors("www.belta.by/rss/news", new URL("https://www.belta.by/rss/news")));
             DBHandler handler = new DBHandler(myAuthors);
             handler.InsertArticle();
         } catch (Exception e) {
