@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Person List</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<h1>News</h1>
+<br/><br/>
+<div>
+    <table border="1">
+        <tr>
+            <th>title</th>
+            <th>description</th>
+            <th>pubDate</th>
+            <th>link</th>
+            <th>source</th>
+        </tr>
+        <tr th:each ="el : ${currentNews}">
+            <td th:utext="${el.title}">...</td>
+            <td th:utext="${el.description}">...</td>
+            <td th:utext="${el.pubDate}">...</td>
+            <td th:utext="${el.link}">...</td>
+            <td th:utext="${el.author}">...</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
