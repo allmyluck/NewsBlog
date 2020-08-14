@@ -2,3 +2,7 @@ Web App: showing parse RSS-feeds from different sources on one page. RSS-feed so
 
 
 ![alt text](report/example.png "Example")​
+
+
+
+![alt text](report/pagination.png "Example")​
