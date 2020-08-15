@@ -28,9 +28,13 @@ public class BasePage {
     public String NewsPage(HttpServletRequest request,
                            Model model,
                            @RequestParam(value = "page", required = false, defaultValue = "0") Integer page) {
-        Page<Article> currentNews = articleRepository.findAllByOrderByTimeDesc(PageRequest.of(page, 40));
+        /*
+        int amount = (int) articleRepository.count();
+        double size = Math.ceil(((double)amount / 21));
+        Page<Article> currentNews = articleRepository.findAllByOrderByTimeDesc(PageRequest.of(page, (int)size));
+        */
+        Page<Article> currentNews = articleRepository.findAllByOrderByTimeDesc(PageRequest.of(page,40));
         model.addAttribute("currentNews",currentNews);
-        //model.addAttribute("numbers",IntStream.range(0,currentNews.getTotalPages()).toArray());
         return "BasePage";
     }
 }
