@@ -21,12 +21,15 @@ public class BasePage {
     @GetMapping("/news")
     public String NewsPage(Model model,
                            @RequestParam(value = "page", required = false, defaultValue = "0") Integer page) {
-        /*
         int amount = (int) articleRepository.count();
-        double size = Math.ceil(((double)amount / 21));
+        double size = 0;
+        if(amount > 210) {
+            size = Math.ceil(((double)amount / 21));
+        } else {
+            size = 10;
+        }
         Page<Article> currentNews = articleRepository.findAllByOrderByTimeDesc(PageRequest.of(page, (int)size));
-        */
-        Page<Article> currentNews = articleRepository.findAllByOrderByTimeDesc(PageRequest.of(page,40));
+        //Page<Article> currentNews = articleRepository.findAllByOrderByTimeDesc(PageRequest.of(page,40));
         model.addAttribute("currentNews",currentNews);
         return "BasePage";
     }
